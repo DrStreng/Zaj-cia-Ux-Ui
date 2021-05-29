@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tabele</title>
+</head>
+
+<body>
+
+    <h1>Tabela</h1>
+
+    <!-- table>thead>tr>th{Lp.}+th{Imie}+th{E-mail}+th{Akcja}^^tbody>tr*3>td{$.}+td{Imie $}+td{email $}+td>button{Pokaż}^^tfoot>tr>td[colspan=2]+td{Akcja} -->
+    <table border="1" width="100%" style="border: 1px solid #ccc; border-collapse: collapse;" >
+        <thead>
+            <tr>
+                <th>Lp.</th>
+                <th>Imie</th>
+                <th>E-mail</th>
+                <th align="center">Akcja</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>1.</td>
+                <td>Imie 1</td>
+                <td>email 1</td>
+                <td align="center"><button>Pokaż</button></td>
+            </tr>
+            <tr>
+                <td>2.</td>
+                <td>Imie 2</td>
+                <td>email 2</td>
+                <td align="center"><button>Pokaż</button></td>
+            </tr>
+            <tr>
+                <td>3.</td>
+                <td>Imie 3</td>
+                <td>email 3</td>
+                <td align="center"><button>Pokaż</button></td>
+            </tr>
+        <tfoot>
+            <tr>
+                <td colspan="3"></td>
+                <td align="center">
+                    <button>Usuń</button>
+
+                </td>
+            </tr>
+        </tfoot>
+        </tbody>
+    </table>
+
+</body>
+
+</html>

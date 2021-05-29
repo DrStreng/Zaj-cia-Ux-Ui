@@ -1,0 +1,15 @@
+#menu li {
+    text-transform: uppercase;
+}
+
+#menu  .important {
+    font-weight: bold;
+}
+
+#menu #about {
+    font-style: italic;
+}
+
+#menu  .active {
+    color: blue;
+}
