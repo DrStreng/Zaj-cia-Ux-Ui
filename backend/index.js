@@ -1,18 +1,22 @@
-const http = require('http');
+const express = require('express');
+
+
+const app = express()
+
+// GET localhost:8080/
+app.get('/', (req, res) => {
+    // const name = req.query.name || 'Guest'
+    // res.send('<h1>Hello ' + name + '</h1>');
+    res.sendFile('index.html', { root: '../frontend/' })
+});
+
+app.get('/api', (req, res) => {
+    const name = req.query.name || 'Guest'
+    res.json({ "name": name });
+})
+
 const port = 8080;
 
-const server = http.createServer((req, res) => {
-
-    if (req.url == '/now') {
-
-        res.setHeader(200, {'Content-Type': 'application/json'});
-        res.write('Hello World!');
-        res.end();
-
-    } else {
-        res.end('Invalid request');
-    }
-}).listen(port);
-
-
-
+app.listen(port, 'localhost', () => {
+    console.log('Server listening on http://localhost:' + port + '/')
+});
